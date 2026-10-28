@@ -1,0 +1,63 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.parent{
+    width: 400px;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.child1{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+
+}
+i{
+    cursor: pointer;
+}
+img{
+    width: 300px;
+    border-radius: 50%;
+}
+input{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    border: hidden;
+}
+button{
+    width: 100px;
+    border-radius: 10px;
+    border: hidden;
+}
+button:hover{
+    background-color: black;
+    color: white;
+
+}
+button{
+    cursor: pointer;
+}
+.close{
+    display: none;
+}
+body:has(#close:checked) .parent{
+    display: none;
+}
+body:has(#close:checked) .close{
+    display: block;
+}
